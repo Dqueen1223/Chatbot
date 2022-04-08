@@ -27,7 +27,7 @@ const Chatbot = () => {
           <p className="bot">
             Hello user, how may I assist you today?
           </p>
-          {(option === 'About Me?' || previousOption === 'About Me?') && (
+          {(option === 'About You?' || previousOption === 'About You?') && (
           <div>
             <p className="user">
               About you?
@@ -36,10 +36,8 @@ const Chatbot = () => {
               I knew the moment I solved my first problem that programming was for me, solving
               difficult
               problems with a team of people is very inspiring and something I am proud of
-              accomplishing
-              .
-              <br />
-              I am eager to learn much more about programming and work on many other projects.
+              accomplishing.
+              I am eager to learn much more about programming and work on various projects.
             </p>
           </div>
           )}
@@ -78,8 +76,8 @@ const Chatbot = () => {
             <p className="bot">
               I am currently adept in C#, Javascript, using React and ASP.Net, I am always
               learning
-              more about them and plan to learn Java and Python.
-              I am also familiar with scrum techniques, as I have worked with them in the past.
+              more about them and I don&apos;t plan to stop learning more.
+              I am also familiar with scrum techniques, as I have worked with scrum in the past.
             </p>
           </>
           )}
@@ -106,12 +104,12 @@ const Chatbot = () => {
           )}
           {option.length === 0 && (
           <>
-            <button onClick={() => setOption('About Me?')} type="button">About Me?</button>
+            <button onClick={() => setOption('About You?')} type="button">About You?</button>
             <button onClick={() => setOption('I want to talk to the bot')} type="button">I want to talk to the bot</button>
             <button onClick={() => handleClick('Contact info')} type="button">Contact info</button>
           </>
           )}
-          {option === 'About Me?' && (<button onClick={() => handleClick('Skills')} type="button">Skills</button>)}
+          {option === 'About You?' && (<button onClick={() => handleClick('Skills')} type="button">Skills</button>)}
           {option === 'About Alfred?' && lastOption.length === 0 && (<button onClick={() => { setLastOption('Alfreds Skills?'); }} type="button">Alfreds Skills?</button>)}
         </div>
         <button onClick={ResetChat} type="button" id="resetChat">ResetChat</button>
